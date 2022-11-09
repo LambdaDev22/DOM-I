@@ -39,6 +39,7 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
+// images
 const logoImg = document.querySelector('#logo-img')
 logoImg.src = siteContent.images['logo-img']
 
@@ -47,3 +48,45 @@ ctaImg.src = siteContent.images['cta-img']
 
 const midImg = document.querySelector('#middle-img')
 midImg.setAttribute('src', siteContent.images['accent-img'])
+
+//footer link
+const footerLink = document.querySelector('footer a')
+footerLink.textContent = siteContent.footer.copyright
+footerLink.classList.add('bold')
+
+// section contact h4
+const contact = document.querySelector('section.contact')
+contact.children[0].textContent = siteContent.contact['contact-h4']
+
+// section contact p 
+contact.children[1].textContent = siteContent.contact['address']
+contact.children[2].textContent = siteContent.contact['phone']
+contact.children[3].textContent = siteContent.contact['email']
+
+// top content
+const topContent = document.querySelector('.top-content')
+topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4']
+topContent.children[0].children[1].textContent = siteContent['main-content']['features-content']
+topContent.children[1].children[0].textContent = siteContent['main-content']['about-h4']
+topContent.children[1].children[1].textContent = siteContent['main-content']['about-content']
+
+
+// bottom content
+const bottomContent = document.querySelector('.bottom-content')
+const h4sBottom = bottomContent.querySelectorAll('h4')
+h4sBottom[0].textContent = siteContent['main-content']['services-h4']
+h4sBottom[1].textContent = siteContent['main-content']["product-h4"]
+h4sBottom[2].textContent = siteContent['main-content']["vision-h4"]
+
+const psBottom = bottomContent.querySelectorAll('p')
+psBottom[0].textContent = siteContent['main-content']['services-content']
+psBottom[1].textContent = siteContent['main-content']["product-content"]
+psBottom[2].textContent = siteContent['main-content']["vision-content"]
+// bottomContent.children[2].children[0].textContent = siteContent['main-content']['services-h4']
+// bottomContent.children[2].children[1].textContent = siteContent['main-content']['services-content']
+// bottomContent.children[3].children[0].textContent = siteContent['main-content']["product-h4"]
+// bottomContent.children[3].children[1].textContent = siteContent['main-content']["product-content"]
+
+//CTA
+document.querySelector('.cta .cta-text h1').textContent = siteContent.cta.h1
+document.querySelector('.cta .cta-text button').textContent = siteContent.cta.button
