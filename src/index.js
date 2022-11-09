@@ -90,3 +90,13 @@ psBottom[2].textContent = siteContent['main-content']["vision-content"]
 //CTA
 document.querySelector('.cta .cta-text h1').textContent = siteContent.cta.h1
 document.querySelector('.cta .cta-text button').textContent = siteContent.cta.button
+
+// nav links
+const navLinks = document.querySelectorAll('nav a')
+const navLinksTexts = Object.values(siteContent.nav)
+navLinks.forEach((link, idx) => {
+  link.textContent = navLinksTexts[idx];
+  link.classList.add('italic')
+})
+
+
